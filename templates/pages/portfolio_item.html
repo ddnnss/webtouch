@@ -1,0 +1,137 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <section class="page-title parallax-section portfolio-item-head">
+        <div class="row-parallax-bg">
+          <div class="parallax-wrapper">
+            <div class="parallax-bg">
+              <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="parallax-overlay"></div>
+        </div>
+        <div class="centrize">
+          <div class="v-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="title text-center">
+                    <h1>{{ portfolioItem.name }}</h1>
+                    <h4>{{ portfolioItem.filter.name }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mb-50">
+              <div class="images-gallery">
+                  {% for image in images %}
+                    <img src="{{ image.image.url }}" alt="{{ portfolioItem.name }}">
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="project-info">
+                <ul>
+                  <li><i class="hc-calendar"></i>Сроки :&nbsp; {{ portfolioItem.date }}</li>
+                  <li><i class="hc-contact"></i>Клиент :&nbsp; {{ portfolioItem.client }}</li>
+                  <li><i class="hc-world"></i>Сайт :&nbsp; <a href="{{ portfolioItem.url }}">ССЫЛКА</a>
+                  </li>
+                  <li style="color: {{ portfolioItem.status.color }};"><i class="hc-build"></i>Статус проекта :&nbsp;  {{ portfolioItem.status.name }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grey-bg">
+        <div class="container">
+          <div class="title text-center">
+            <h6>Minimal Tabs</h6>
+          </div>
+          <div class="row pt-25 pb-25">
+            <div class="col-md-8 col-md-offset-2">
+              <ul class="nav nav-tabs minimal-tabs center-tabs cols-3">
+                <li class="active"><a href="#min-tab-1" data-toggle="tab"><span>описание сайта</span></a>
+                </li>
+                <li><a href="#min-tab-2" data-toggle="tab"><span>пожелания клиента</span></a>
+
+                </li>
+                <li><a href="#min-tab-3" data-toggle="tab"><span>реализованные решения</span></a>
+
+                </li>
+              </ul>
+              <div class="tab-content text-center">
+                <div class="tab-pane fade active in" id="min-tab-1">
+                  {{ portfolioItem.description | safe }}
+                </div>
+                <div class="tab-pane fade" id="min-tab-2">
+                      {{ portfolioItem.wishes | safe }}
+                </div>
+                <div class="tab-pane fade" id="min-tab-3">
+                 {{ portfolioItem.technical | safe }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-bg">
+        <div class="container">
+          <div class="title text-center">
+            <h6></h6>
+          </div>
+          <div class="row pt-25 pb-25">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="skill">
+                <h5 class="skill-name">BackEnd<span class="skill-perc">{{ portfolioItem.progressBarBackEnd }}%</span></h5>
+                <div class="progress">
+                  <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarBackEnd }}"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h5 class="skill-name">FrontEnd<span class="skill-perc">{{ portfolioItem.progressBarFrontEnd }}%</span></h5>
+                <div class="progress">
+                  <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarFrontEnd }}"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h5 class="skill-name">Production<span class="skill-perc">{{ portfolioItem.progressBarProduction }}%</span></h5>
+                <div class="progress">
+                  <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarProduction }}"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h5 class="skill-name">SEO & Marketing<span class="skill-perc">{{ portfolioItem.progressBarSEO }}%</span></h5>
+                <div class="progress">
+                  <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarSEO }}"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="grey-bg p-0">
+        <div class="container">
+          <div class="projects-controller portfolio-item-all-work">
+            <!-- <a class="prev" href="#"><span><i class="hc-arrow-round-back"></i> Previous Project</span></a> -->
+            <a class="all" href="{% url 'portfolio' %}"><span><i class="hc-apps"></i> </span>ВСЕ РАБОТЫ</a>
+            <!-- <a class="next" href="#"><span>Next Project<i class="hc-arrow-round-forward"></i></span></a> -->
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

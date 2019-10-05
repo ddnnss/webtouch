@@ -1,0 +1,63 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <section class="page-title parallax-section portfolio-item-head">
+        <div class="row-parallax-bg">
+          <div class="parallax-wrapper">
+            <div class="parallax-bg">
+              <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="parallax-overlay"></div>
+        </div>
+        <div class="centrize">
+          <div class="v-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="title text-center">
+                    <h1>Портфолио</h1>
+                    <h4>Портфолио</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <ul id="filters">
+              <li class="active" data-filter="*">ВСЕ</li>
+                {% for filter in filters %}
+                      <li data-filter=".{{ filter.name_slug }}">{{ filter.name }}</li>
+                 {% endfor %}
+            </ul>
+            <div class="with-spacing three-col" id="works-grid">
+                {% for item in portfolioItems %}
+                    <div class="work-item {{ item.filter.name_slug }} ">
+                <div class="work-detail">
+                  <a href="{% url 'portfolio-item' item.name_slug %}">
+                    <img src="{{ item.image.url }}" alt="">
+                    <div class="work-info">
+                      <div class="centrize">
+                        <div class="v-center">
+                          <h3>{{ item.name }}</h3>
+                          <p>{{ item.filter.name }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}
