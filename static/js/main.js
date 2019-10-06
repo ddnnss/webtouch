@@ -1105,19 +1105,19 @@
           type: 'POST',
           data: $(this).serialize(),
         })
-        .done(function() {
-          var message = $('#contact-form').data('success-text') || 'Your message has been sent. We will get back to you shortly!';
-          var succesTemplate = '<div role="alert" class="alert alert-success alert-colored">' + message + '</div>';
-          $('#contact-form input, #contact-form textarea, #contact-form button').attr('disabled', 'disabled');
-          $('#contact-form .alert').fadeOut(300);
-          $(succesTemplate).insertBefore($('#contact-form .btn'));
-        })
-        .fail(function() {
-          var message = $('#contact-form').data('error-text') || 'There was an error. Try again later.';
-          var errorTemplate = '<div role="alert" class="alert alert-danger alert-colored">' + message + '</div>';
-          $('#contact-form .alert').fadeOut(300);
-          $(errorTemplate).insertBefore($('#contact-form .btn'));
-        })
+        // .done(function() {
+        //   var message = $('#contact-form').data('success-text') || 'Your message has been sent. We will get back to you shortly!';
+        //   var succesTemplate = '<div role="alert" class="alert alert-success alert-colored">' + message + '</div>';
+        //   $('#contact-form input, #contact-form textarea, #contact-form button').attr('disabled', 'disabled');
+        //   $('#contact-form .alert').fadeOut(300);
+        //   $(succesTemplate).insertBefore($('#contact-form .btn'));
+        // })
+        // .fail(function() {
+        //   var message = $('#contact-form').data('error-text') || 'There was an error. Try again later.';
+        //   var errorTemplate = '<div role="alert" class="alert alert-danger alert-colored">' + message + '</div>';
+        //   $('#contact-form .alert').fadeOut(300);
+        //   $(errorTemplate).insertBefore($('#contact-form .btn'));
+        // })
       }
     });
 

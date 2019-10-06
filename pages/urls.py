@@ -8,6 +8,7 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
     path('portfolio/<nameSlug>', views.portfolio_item, name='portfolio-item'),
+    path('callback/', views.callbackForm, name='callbackForm'),
 
     # path('login/', views.login, name='login'),
     # path('logout/', views.logout_page, name='logout'),

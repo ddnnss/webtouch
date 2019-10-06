@@ -69,3 +69,11 @@ class PortfolioItem(models.Model):
 class PortfolioItemImage(models.Model):
     item = models.ForeignKey(PortfolioItem, blank=False, null=True, on_delete=models.CASCADE, verbose_name='Кейс', related_name='porfolioItemImages')
     image = models.ImageField('Картинка', upload_to='portfolio_img/', blank=False)
+
+
+class Callback(models.Model):
+    name = models.CharField('Поле - Ваше имя',max_length=255, blank=False, default='Нет данных')
+    company = models.CharField('Поле - Телефон', max_length=255, blank=True, default='Нет данных')
+    phone = models.CharField('Поле - Телефон', max_length=255, blank=False, default='Нет данных')
+    email = models.EmailField('Поле - Email', max_length=255, blank=True, default='Нет данных')
+    message = models.TextField('Поле - Сообщение', max_length=255, blank=True, default='Нет данных')
