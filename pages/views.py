@@ -27,14 +27,16 @@ def about(request):
     return render(request, 'pages/about.html', locals())
 
 def callbackForm(request):
+    print(request.POST)
     return_dict = {}
     if request.POST:
-        form = CallbackForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return_dict['result'] = 'ok'
-        else:
-            return_dict['result'] = 'error'
-            return_dict['errors'] = form.errors
-            print(form.errors)
+        if request.POST.get('agree') == 'no':
+            form = CallbackForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return_dict['result'] = 'ok'
+            else:
+                return_dict['result'] = 'error'
+                return_dict['errors'] = form.errors
+                print(form.errors)
     return JsonResponse(return_dict)

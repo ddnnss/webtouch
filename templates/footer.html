@@ -1,21 +1,21 @@
 {% load static %}
-      <footer id="footer">
-        <div class="footer-copy">
-          <div class="container">
+<footer id="footer">
+    <div class="footer-copy">
+        <div class="container">
             <div class="footer-copy-inner">
-              <div style="display: flex; align-items: center" >
-                  <img style="width: 40px; margin-right: 10px" src="{% static 'images/logo-white.svg' %}" alt="">
-                  <span style="color: #ffffff" class='logo-text'>wEbtOUCh</span>
-              </div>
-              <div >
-                <div class="copy-text">
-                  <p>© 2019 All rights reserved.</p>
+                <div style="display: flex; align-items: center" >
+                    <img style="width: 40px; margin-right: 10px" src="{% static 'images/logo-white.svg' %}" alt="">
+                    <span style="color: #ffffff" class='logo-text'>wEbtOUCh</span>
                 </div>
-              </div>
+                <div >
+                    <div class="copy-text">
+                        <p>© 2019 All rights reserved.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
+    </div>
+</footer>
 
 <script>
 
@@ -26,65 +26,73 @@
             var msg = 'Вам обязательно перезвонят'
         }
         if (type === 'send'){
-             var btn = document.getElementById('callback_submit_send')
-             var btnText = 'Отправить'
+            var btn = document.getElementById('callback_submit_send')
+            var btnText = 'Отправить'
             var msg = 'Вам обязательно ответят'
         }
-    let csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].defaultValue
-    let name = document.getElementsByName('name')[0]
-    let email = document.getElementsByName('email')[0]
-    let phone = document.getElementsByName('phone')[0]
-    let company = document.getElementsByName('company')[0]
-    let message = document.getElementsByName('message')[0]
+        let csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].defaultValue
+        let name = document.getElementsByName('name')[0]
+        let email = document.getElementsByName('email')[0]
+        let phone = document.getElementsByName('phone')[0]
+        let company = document.getElementsByName('company')[0]
+        let message = document.getElementsByName('message')[0]
+        let checkBox = document.getElementsByName('agree')[0]
+
         let successMessage = document.getElementsByClassName('callback-form-result')[0]
+        if (checkBox.checked){
+            var agree='yes'
+        }
+        else{
+            var agree='no'
+        }
+        btn.setAttribute('disabled', 'disabled');
+        btn.firstChild.data = 'Отправка ...'
+        successMessage.innerText= '';
 
-    btn.setAttribute('disabled', 'disabled');
-    btn.firstChild.data = 'Отправка ...'
-    successMessage.innerText= '';
+        let fd = new FormData();
 
-    let fd = new FormData();
-
-    fd.append('csrfmiddlewaretoken',csrfmiddlewaretoken)
-    fd.append('name',name.value)
-    fd.append('email',email.value)
-    fd.append('phone',phone.value)
+        fd.append('csrfmiddlewaretoken',csrfmiddlewaretoken)
+        fd.append('name',name.value)
+        fd.append('email',email.value)
+        fd.append('phone',phone.value)
+        fd.append('agree',agree)
         fd.append('company',company.value)
         fd.append('message',message.value)
 
 
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/callback/', true);
-    xhr.onload = function () {
-        console.log(this.response);
-        if (JSON.parse(this.response)['result'] === 'ok'){
-            document.getElementById('callbackForm_buttons').style.display= 'none'
-            successMessage.classList.remove("error-field");
-            successMessage.append(msg)
-        }
-        else{
-            btn.removeAttribute('disabled')
-            btn.firstChild.data = btnText
-            if (JSON.parse(this.response)['errors']['name']){
-                name.closest('div').classList.add('has-error')
-                successMessage.innerText= JSON.parse(this.response)['errors']['name']
-                successMessage.classList.add("error-field");
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/callback/', true);
+        xhr.onload = function () {
+            console.log(this.response);
+            if (JSON.parse(this.response)['result'] === 'ok'){
+                document.getElementById('callbackForm_buttons').style.display= 'none'
+                successMessage.classList.remove("error-field");
+                successMessage.append(msg)
+            }
+            else{
+                btn.removeAttribute('disabled')
+                btn.firstChild.data = btnText
+                if (JSON.parse(this.response)['errors']['name']){
+                    name.closest('div').classList.add('has-error')
+                    successMessage.innerText= JSON.parse(this.response)['errors']['name']
+                    successMessage.classList.add("error-field");
+
+                }
+                if (JSON.parse(this.response)['errors']['phone']){
+                    phone.closest('div').classList.add('has-error')
+                    successMessage.innerText= JSON.parse(this.response)['errors']['phone']
+                    successMessage.classList.add("error-field");
+
+                }
+                if (JSON.parse(this.response)['errors']['email']){
+                    email.closest('div').classList.add('has-error')
+                    successMessage.innerText= JSON.parse(this.response)['errors']['email']
+                    successMessage.classList.add("error-field");
+
+                }
 
             }
-            if (JSON.parse(this.response)['errors']['phone']){
-                phone.closest('div').classList.add('has-error')
-                successMessage.innerText= JSON.parse(this.response)['errors']['phone']
-                successMessage.classList.add("error-field");
-
-            }
-            if (JSON.parse(this.response)['errors']['email']){
-                email.closest('div').classList.add('has-error')
-                successMessage.innerText= JSON.parse(this.response)['errors']['email']
-                successMessage.classList.add("error-field");
-
-            }
-
-        }
-    };
-    xhr.send(fd);
-}
+        };
+        xhr.send(fd);
+    }
 </script>
