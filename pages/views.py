@@ -17,3 +17,9 @@ def portfolio_item(request,nameSlug):
 
 def prices(request):
     return render(request, 'pages/price.html', locals())
+
+def contacts(request):
+    return render(request, 'pages/contacts.html', locals())
+
+def about(request):
+    return render(request, 'pages/about.html', locals())

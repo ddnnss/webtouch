@@ -15,8 +15,8 @@
               <div class="slide-content">
                 <div class="container">
                   <h1 class="font-medium">Digital<br>Creative <span class="typed-words" data-strings="[&quot;Agency&quot;, &quot;Team&quot;, &quot;Products&quot;]"></span></h1>
-                  <h4>We help the world’s top companies build amazing products.</h4>
-                  <p><a class="btn btn-light-out" href="#">Who We Are</a><a class="btn btn-color" href="#" data-custom-bg="#e42869">Portfolio</a>
+                  <h4>Мы реализуем любые ваши пожелания в Web!</h4>
+                  <p><a class="btn btn-dark no-radius btn-lg" href="{% url 'portfolio' %}">Наши кейсы</a><a style="color: white;" class="btn btn-dark-out upper no-radius btn-lg" href="#callback_form" >Задать вопрос</a>
                   </p>
                 </div>
               </div>
@@ -73,58 +73,44 @@
             </div>
             <div class="section-content pt-25 pb-25">
               <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <div class="icon-box" data-animation="fadeInRight">
                     <div class="animated-icon white" data-icon="{% static 'images/icons/paintroller.svg' %}"></div>
                     <div class="ib-content">
-                      <h4 class="upper">Branding</h4>
+                      <h4 class="upper">Дизайн</h4>
                       <ul class="list-unstyled">
-                        <li>Logos</li>
-                        <li>Corporate Identity</li>
-                        <li>Business Cards</li>
-                        <li>Packaging</li>
+                        <li>Логотипы</li>
+                        <li>Баннеры и Карточки</li>
+                        <li>Дизайн Сайта на заказ</li>
+                        <li>Дизайн своего шрифта</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <div class="icon-box" data-animation="fadeInRight" data-delay="300">
-                    <div class="animated-icon white" data-icon="{% static 'images/icons/server.svg' %}"></div>
+                    <div class="animated-icon white" data-icon="{% static 'images/icons/display.svg' %}"></div>
                     <div class="ib-content">
-                      <h4 class="upper">Development</h4>
+                      <h4 class="upper">Разработка</h4>
                       <ul class="list-unstyled">
-                        <li>Websites</li>
-                        <li>Native Apps</li>
-                        <li>WordPress</li>
-                        <li>eCommerce</li>
+                        <li>Сайтов</li>
+                        <li>Web приложений</li>
+                        <li>CRM систем</li>
+                        <li>Мобильных приложений</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <div class="icon-box" data-animation="fadeInRight" data-delay="600">
                     <div class="animated-icon white" data-icon="{% static 'images/icons/compass.svg' %}"></div>
                     <div class="ib-content">
-                      <h4 class="upper">Marketing</h4>
+                      <h4 class="upper">Маркетинг</h4>
                       <ul class="list-unstyled">
-                        <li>Strategy</li>
-                        <li>SEO</li>
-                        <li>Sales</li>
-                        <li>Email Campaigns</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                  <div class="icon-box" data-animation="fadeInRight" data-delay="900">
-                    <div class="animated-icon white" data-icon="{% static 'images/icons/cards-diamonds.svg' %}"></div>
-                    <div class="ib-content">
-                      <h4 class="upper">Product Design</h4>
-                      <ul class="list-unstyled">
-                        <li>UX App Design</li>
-                        <li>Corporate Identity</li>
-                        <li>Business Cards</li>
-                        <li>Packaging</li>
+                        <li>SEO продвижение</li>
+                        <li>Таргетированная реклама</li>
+                        <li>Яндекс.Директ</li>
+                        <li>Траффик и ссылки</li>
                       </ul>
                     </div>
                   </div>
@@ -166,7 +152,7 @@
             </div>
           </div>
           <div class="see-more-btn">
-              <a class="btn btn-dark-out upper no-radius btn-lg" href="{% url 'portfolio' %}">Смотреть Портфолио</a>
+              <a class="btn btn-dark-out upper no-radius btn-lg" href="{% url 'portfolio' %}">Все кейсы</a>
           </div>
         </div>
       </section>
@@ -340,4 +326,5 @@
           </div>
         </div>
       </section>
+    {% include 'pages/callback_form.html' %}
 {% endblock %}

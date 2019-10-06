@@ -1,0 +1,115 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+ <section class="page-title parallax-section portfolio-item-head">
+        <div class="row-parallax-bg">
+          <div class="parallax-wrapper">
+            <div class="parallax-bg">
+              <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="parallax-overlay"></div>
+        </div>
+        <div class="centrize">
+          <div class="v-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="title text-center">
+                    <h1>Контакты</h1>
+                    <h4>текст</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section class="p-0">
+        <div class="container-fluid">
+          <div class="row row-flex">
+            <div class="col-sm-4">
+              <div class="column-inner with-padding">
+                <div class="icon-box align-center"><i class="hc-pin"></i>
+                  <div class="ib-content">
+                    <h3>Наш Офис</h3>
+                    <p>Россошанская ул.,1
+                      <br>Москва, Россия</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="column-inner with-padding grey-bg">
+                <div class="icon-box align-center"><i class="hc-mail-open"></i>
+                  <div class="ib-content">
+                    <h3>Наша Почта</h3>
+                    <p>info@webtouch.studio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="column-inner with-padding dark-bg">
+                <div class="icon-box align-center"><i class="hc-megaphone"></i>
+                  <div class="ib-content">
+                    <h3>Наш телефон</h3>
+                    <p>+79252309605
+                      <br>WhatsApp\Телефон, с 8:00 до 22:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 map-side map-right">
+              <div id="map" data-lat="40.773328" data-long="-73.960088"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-md-5 col-sm-12">
+            <div class="title">
+              <h2 >Get In Touch</h2>
+              <h4>Let's work together.</h4>
+            </div>
+            <div class="row pt-25 pb-25">
+              <div class="container-fluid">
+                <form id="contact-form" action="http://themes.hody.co/html/bezel/mail.php" method="POST">
+                  <div class="form-group" data-animation="fadeInRight">
+                    <label>Your Name</label>
+                    <input class="form-control" type="text" name="name" data-required>
+                  </div>
+                  <div class="form-group" data-animation="fadeInRight">
+                    <label>Your Email</label>
+                    <input class="form-control" type="email" name="email" data-required>
+                  </div>
+                  <div class="form-group" data-animation="fadeInRight">
+                    <label>Phone Number</label>
+                    <input class="form-control" type="text" name="phone">
+                  </div>
+                  <div class="form-group" data-animation="fadeInRight">
+                    <label>Your Message</label>
+                    <textarea class="form-control" name="message" data-required></textarea>
+                  </div>
+                  <div class="form-group mt-25" data-animation="fadeInRight">
+                    <button class="btn btn-color" type="submit">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+{% endblock %}
