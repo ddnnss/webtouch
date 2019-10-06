@@ -4523,6 +4523,7 @@ section.section-skewed.section-bordered #home-slider:after {
 }
 .copy-text p {
   margin: 0;
+  color: #ffffff;
 }
 @media only screen and (max-width: 991px) {
   .footer-spacer {

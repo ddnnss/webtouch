@@ -72,37 +72,42 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6 map-side map-right">
-              <div id="map" data-lat="40.773328" data-long="-73.960088"></div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f3c27a22f25c9f458862481e3d9e098fc72515da61a7bc2719eff1c9a4e1714&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="col-md-5 col-sm-12">
             <div class="title">
-              <h2 >Get In Touch</h2>
-              <h4>Let's work together.</h4>
+               <h4>Напишите нам</h4>
+                <h2 >Остались вопросы?</h2>
             </div>
             <div class="row pt-25 pb-25">
               <div class="container-fluid">
                 <form id="contact-form" action="http://themes.hody.co/html/bezel/mail.php" method="POST">
                   <div class="form-group" data-animation="fadeInRight">
-                    <label>Your Name</label>
+                    <label>Ваше имя</label>
                     <input class="form-control" type="text" name="name" data-required>
                   </div>
                   <div class="form-group" data-animation="fadeInRight">
-                    <label>Your Email</label>
+                    <label>Компания</label>
                     <input class="form-control" type="email" name="email" data-required>
                   </div>
                   <div class="form-group" data-animation="fadeInRight">
-                    <label>Phone Number</label>
+                    <label>Адрес электронной почты</label>
+                    <input class="form-control" type="text" name="phone">
+                  </div>
+                     <div class="form-group" data-animation="fadeInRight">
+                    <label>Телефон</label>
                     <input class="form-control" type="text" name="phone">
                   </div>
                   <div class="form-group" data-animation="fadeInRight">
-                    <label>Your Message</label>
+                    <label>Сообщение</label>
                     <textarea class="form-control" name="message" data-required></textarea>
                   </div>
                   <div class="form-group mt-25" data-animation="fadeInRight">
-                    <button class="btn btn-color" type="submit">Send Message</button>
+                    <button class="btn btn-dark upper no-radius btn-lg btn-full mb-20" type="submit">Перезвоните мне</button>
+                                <button class="btn btn-dark-out upper no-radius btn-lg btn-full mm0" type="submit">Отправить</button>
                   </div>
                 </form>
               </div>
