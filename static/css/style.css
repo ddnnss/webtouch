@@ -4572,16 +4572,17 @@ section.section-skewed.section-bordered #home-slider:after {
   font-size: 13px;
   margin: 0 5px;
   cursor: pointer;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  /*-webkit-transition: all .3s ease;*/
+  /*transition: all .3s ease;*/
   color: #1f1f1f;
-  border: 1px solid transparent;
+  /*border: 1px solid transparent;*/
   line-height: 1;
 }
 #filters li.active {
   color: #00c3da;
   border-color: #00c3da;
-  border-radius: 50px;
+  /*border-radius: 50px;*/
+  border-bottom: 1px solid #1f1f1f;
 }
 #filters li.active:hover {
   color: #00c3da;

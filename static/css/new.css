@@ -14,6 +14,8 @@
 #navbar .navigation-menu > li > a {
     font-size: 15px !important;
 }
+
+
 .bg-image{
     background-image: url(../images/back.jpg);
     width: 100%;
@@ -50,7 +52,7 @@
     margin: 0 !important;
 }
 
-.portfolio-item-head{
+.small-section{
     height: 350px !important;
 }
 .portfolio-item-all-work{
