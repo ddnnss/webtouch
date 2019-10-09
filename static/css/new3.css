@@ -170,3 +170,77 @@
 .error-field{
     color: red;
 }
+
+
+.all-our-works{
+
+}
+
+.all-our-works-inner{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+}
+
+
+.all-our-works-item{
+    text-align: center;
+    z-index: 1000;
+    background-color: #f7f7f7;
+    padding: 31%;
+}
+
+.all-our-works-item:hover{
+    box-shadow: 0px 1px 7px 1px #00000045;
+    background-color: #fff;
+    cursor: pointer
+}
+.all-our-works-item p{
+    font-size: 14px;
+    color: #060F1E;
+}
+
+@media screen and (max-width: 1199px ){
+    .all-our-works-inner{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+    }
+    .all-our-works-item{
+        padding: 31%;
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .all-our-works-inner{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+    }
+    .all-our-works-item{
+        padding: 13%;
+    }
+}
+
+@media (max-width: 767px){
+    .all-our-works-inner{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .all-our-works-item{
+        padding: 20%;
+    }
+}
+
+@media (max-width: 575px){
+    .all-our-works-inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .all-our-works-item{
+        padding: 21%;
+    }
+}

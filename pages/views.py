@@ -31,6 +31,10 @@ def about(request):
     callbackForm = CallbackForm()
     return render(request, 'pages/about.html', locals())
 
+def sozdaniesaitov(request):
+    callbackForm = CallbackForm()
+    return render(request, 'pages/price.html', locals())
+
 def callbackForm(request):
     print(request.POST)
     return_dict = {}
