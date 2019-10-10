@@ -9,7 +9,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('portfolio/<nameSlug>', views.portfolio_item, name='portfolio-item'),
     path('callback/', views.callbackForm, name='callbackForm'),
-    path('sozdanie-saitov/', views.sozdaniesaitov, name='sozdaniesaitov'),
+    path('create-landing/', views.createlanding, name='createlanding'),
 
     # path('login/', views.login, name='login'),
     # path('logout/', views.logout_page, name='logout'),

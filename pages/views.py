@@ -31,7 +31,7 @@ def about(request):
     callbackForm = CallbackForm()
     return render(request, 'pages/about.html', locals())
 
-def sozdaniesaitov(request):
+def createlanding(request):
     callbackForm = CallbackForm()
     return render(request, 'pages/price.html', locals())
 
