@@ -10,6 +10,11 @@ urlpatterns = [
     path('portfolio/<nameSlug>', views.portfolio_item, name='portfolio-item'),
     path('callback/', views.callbackForm, name='callbackForm'),
     path('create-landing/', views.createlanding, name='createlanding'),
+    path('create-blog/', views.createlanding, name='createblog'),
+    path('create-service/', views.createlanding, name='createservice'),
+    path('create-shop/', views.createlanding, name='createshop'),
+    path('create-forum/', views.createlanding, name='createforum'),
+    path('create-crm/', views.createlanding, name='createcrm'),
 
     # path('login/', views.login, name='login'),
     # path('logout/', views.logout_page, name='logout'),
