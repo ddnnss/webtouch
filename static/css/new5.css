@@ -110,11 +110,13 @@
 
 #filters li.active{
     border-color: #1f1f1f !important;
-    color: #1f1f1f !important;
+    color: #ffffff !important;
 }
 .icon-tabs.cols-4 > li {
     width: 24%;
 }
+
+
 
 @media (max-width: 990px) and (min-width: 0px){
     #navbar .logo a {
@@ -132,8 +134,15 @@
     .mm0{
         margin: 0 !important;
     }
+      #filters {
+  grid-template-columns: repeat(4,1fr);
+    }
 }
-
+@media (max-width: 527px) and (min-width: 0px){
+    #filters {
+  grid-template-columns: repeat(2,1fr);
+    }
+}
 .btn-dark {
     background-color: #060F1E;
 }
