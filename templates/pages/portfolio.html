@@ -9,7 +9,7 @@
         <div class="row-parallax-bg">
           <div class="parallax-wrapper">
             <div class="parallax-bg">
-              <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+              <img src="{% static 'images/kaysi.jpg' %}" alt="">
             </div>
           </div>
           <div class="parallax-overlay"></div>
@@ -20,8 +20,8 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="title text-center">
-                    <h1>Портфолио</h1>
-                    <h4>Портфолио</h4>
+                    <h1>Наши Кейсы</h1>
+                    <h4>Для удобства воспользуйтесь фильтрами ниже</h4>
                   </div>
                 </div>
               </div>
@@ -30,7 +30,7 @@
         </div>
       </section>
       <section>
-        <div class="container">
+
           <div class="row">
             <ul id="filters">
               <li class="active" data-filter="*">ВСЕ</li>
@@ -38,7 +38,7 @@
                       <li data-filter=".{{ filter.name_slug }}">{{ filter.name }}</li>
                  {% endfor %}
             </ul>
-            <div class="with-spacing three-col" id="works-grid">
+            <div class="with-spacing20 three-col" id="works-grid">
                 {% for item in portfolioItems %}
                     <div class="work-item {{ item.filter.name_slug }} ">
                 <div class="work-detail">
@@ -48,7 +48,7 @@
                       <div class="centrize">
                         <div class="v-center">
                           <h3>{{ item.name }}</h3>
-                          <p>{{ item.filter.name }}</p>
+                          <p>{{ item.shortDescription }}</p>
                         </div>
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                 {% endfor %}
             </div>
           </div>
-        </div>
+
       </section>
-    {% include 'pages/callback_form.html' %}
+
 {% endblock %}

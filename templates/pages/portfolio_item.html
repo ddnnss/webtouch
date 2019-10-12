@@ -9,7 +9,7 @@
         <div class="row-parallax-bg">
           <div class="parallax-wrapper">
             <div class="parallax-bg">
-              <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+              <img src="{{ portfolioItem.detailImage.url }}" alt="">
             </div>
           </div>
           <div class="parallax-overlay"></div>
@@ -21,7 +21,7 @@
                 <div class="col-md-8 col-md-offset-2">
                   <div class="title text-center">
                     <h1>{{ portfolioItem.name }}</h1>
-                    <h4>{{ portfolioItem.filter.name }}</h4>
+                    <h4>{{ portfolioItem.shortDescription }}</h4>
                   </div>
                 </div>
               </div>
@@ -133,5 +133,5 @@
           </div>
         </div>
       </section>
-{% include 'pages/callback_form.html' %}
+
 {% endblock %}

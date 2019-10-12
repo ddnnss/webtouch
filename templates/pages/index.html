@@ -132,7 +132,7 @@
           <div class="row" data-negative-margin="150">
             <div class="enable-animation two-col with-spacing" id="works-grid">
                 {% for item in portfolioItems %}
-                    <div class="work-item ">
+                    <div class="work-item with-hover">
                         <div class="work-detail">
                           <a href="{% url 'portfolio-item' item.name_slug %}">
                             <img src="{{ item.image.url }}" alt="">

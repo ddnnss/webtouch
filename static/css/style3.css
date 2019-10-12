@@ -4606,6 +4606,9 @@ section.section-skewed.section-bordered #home-slider:after {
 #works-grid.with-spacing .work-item {
   padding: 10px;
 }
+#works-grid.with-spacing20 .work-item {
+  padding: 20px;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #works-grid.two-col .work-item,
   #works-grid.three-col .work-item,
@@ -4634,7 +4637,7 @@ section.section-skewed.section-bordered #home-slider:after {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.work-item:hover img {
+.work-item.with-hover:hover img {
   -webkit-transform: scale(1.2) translateY(-20px);
   transform: scale(1.2) translateY(-20px);
 }
