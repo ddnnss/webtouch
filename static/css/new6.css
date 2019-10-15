@@ -223,7 +223,22 @@
     background-color: #fff;
 }
 
+.project-status{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
 
+.project-status p{
+   display: flex;
+    align-items: center;
+
+}
+
+ .project-status i{
+     font-size: 30px;
+     margin-right: 15px;
+ }
 @media screen and (max-width: 1199px ){
     .all-our-works-inner{
         display: grid;

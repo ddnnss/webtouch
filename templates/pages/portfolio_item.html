@@ -30,70 +30,78 @@
         </div>
       </section>
 
-     <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 mb-50">
-              <div class="images-gallery">
-                  {% for image in images %}
-                    <img src="{{ image.image.url }}" alt="{{ portfolioItem.name }}">
-                {% endfor %}
-              </div>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <div class="project-info">
-                <ul>
-                  <li><i class="hc-calendar"></i>Сроки :&nbsp; {{ portfolioItem.date }}</li>
-                  <li><i class="hc-contact"></i>Клиент :&nbsp; {{ portfolioItem.client }}</li>
-                  <li><i class="hc-world"></i>Сайт :&nbsp; <a href="{{ portfolioItem.url }}">ССЫЛКА</a>
-                  </li>
-                  <li style="color: {{ portfolioItem.status.color }};"><i class="hc-build"></i>Статус проекта :&nbsp;  {{ portfolioItem.status.name }}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="case-info grey-bg">
+    <div class="container project-status">
+        <div>
+          <p> <i class="hc-calendar"></i>Сроки :&nbsp; {{ portfolioItem.date }}</p>
         </div>
-      </section>
-      <section class="grey-bg">
-        <div class="container">
-          <div class="title text-center">
-            <h6>Minimal Tabs</h6>
-          </div>
-          <div class="row pt-25 pb-25">
-            <div class="col-md-8 col-md-offset-2">
-              <ul class="nav nav-tabs minimal-tabs center-tabs cols-3">
-                <li class="active"><a href="#min-tab-1" data-toggle="tab"><span>описание сайта</span></a>
-                </li>
-                <li><a href="#min-tab-2" data-toggle="tab"><span>пожелания клиента</span></a>
+        <div><p><i class="hc-star"></i>Фильтр :&nbsp; {{ portfolioItem.filter.name }}</p></div>
+        <div><p><i class="hc-world"></i>Сайт :&nbsp; <a href="{{ portfolioItem.url }}">{{ portfolioItem.linkText }}</a></p></div>
+        <div><p> <i class="hc-build"></i>Статус проекта :&nbsp;  {{ portfolioItem.status.name }}</p></div>
 
-                </li>
-                <li><a href="#min-tab-3" data-toggle="tab"><span>реализованные решения</span></a>
 
-                </li>
-              </ul>
-              <div class="tab-content text-center">
-                <div class="tab-pane fade active in" id="min-tab-1">
-                  {{ portfolioItem.description | safe }}
-                </div>
-                <div class="tab-pane fade" id="min-tab-2">
-                      {{ portfolioItem.wishes | safe }}
-                </div>
-                <div class="tab-pane fade" id="min-tab-3">
-                 {{ portfolioItem.technical | safe }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="dark-bg">
+    </div>
+    </div>
+    <section>
         <div class="container">
           <div class="title text-center">
             <h6></h6>
           </div>
           <div class="row pt-25 pb-25">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="photo-gallery masonry-style">
+                {% for image in images %}
+              <div class="gallery-item">
+                <a href="{{ image.image.url }}">
+                  <img src="{{ image.image.url }}" alt="{{ portfolioItem.name }}">
+                  <div class="gallery-overlay"></div>
+                </a>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="grey-bg">
+        <div class="container">
+          <div class="title text-center">
+            <h6></h6>
+          </div>
+           <div class="row pt-25 pb-25">
+               <div class="col-md-6 ">
+              <div class="title">
+                <h6></h6>
+              </div>
+              <ul class="accordion nav" data-open-first="true">
+                <li class="active">
+                  <div class="accordion-title">
+                    <h4>Описание кейса</h4>
+                  </div>
+                  <div class="accordion-content">
+                      {{ portfolioItem.description | safe}}
+                  </div>
+                </li>
+                <li>
+                  <div class="accordion-title">
+                    <h4>Требования к сайту</h4>
+                  </div>
+                  <div class="accordion-content">
+                      {{ portfolioItem.wishes | safe }}
+                  </div>
+                </li>
+                <li>
+                  <div class="accordion-title">
+                    <h4>Реализованные решения</h4>
+                  </div>
+                  <div class="accordion-content">
+                      {{ portfolioItem.technical | safe}}
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 ">
               <div class="skill">
                 <h5 class="skill-name">BackEnd<span class="skill-perc">{{ portfolioItem.progressBarBackEnd }}%</span></h5>
                 <div class="progress">
@@ -112,23 +120,26 @@
                   <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarProduction }}"></div>
                 </div>
               </div>
+                {% if portfolioItem.progressBarSEO > 0  %}
               <div class="skill">
                 <h5 class="skill-name">SEO & Marketing<span class="skill-perc">{{ portfolioItem.progressBarSEO }}%</span></h5>
                 <div class="progress">
                   <div class="progress-bar colored" role="progressbar" data-progress="{{ portfolioItem.progressBarSEO }}"></div>
                 </div>
               </div>
+                {% endif %}
             </div>
           </div>
         </div>
       </section>
 
 
-      <section class="grey-bg p-0">
+
+      <section style="margin-bottom: 40px" class="grey-bg p-0">
         <div class="container">
           <div class="projects-controller portfolio-item-all-work">
             <!-- <a class="prev" href="#"><span><i class="hc-arrow-round-back"></i> Previous Project</span></a> -->
-            <a class="all" href="{% url 'portfolio' %}"><span><i class="hc-apps"></i> </span>ВСЕ РАБОТЫ</a>
+            <a class="btn btn-dark" style="color: white; cursor: pointer" href="{% url 'portfolio' %}">К другим кейсам</a>
             <!-- <a class="next" href="#"><span>Next Project<i class="hc-arrow-round-forward"></i></span></a> -->
           </div>
         </div>

@@ -42,6 +42,7 @@ class PortfolioItem(models.Model):
     client = models.CharField('Клиент', max_length=255, default='')
     date = models.CharField('Дата', max_length=100, default='')
     url = models.CharField('Ссылка', max_length=100, default='')
+    linkText = models.CharField('Надпись на ссылке', max_length=100, default='')
     shortDescription = models.CharField('Короткое описание', max_length=200, default='')
     description = RichTextUploadingField('Описание', blank=True, null=True)
     wishes = RichTextUploadingField('Пожелания', blank=True, null=True)
