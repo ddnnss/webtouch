@@ -9,10 +9,10 @@
         <div class="row-parallax-bg">
             <div class="parallax-wrapper">
                 <div class="parallax-bg">
-                    <img src="{% static 'images/bg-image-49.jpg' %}" alt="">
+                    <img src="{% static 'images/Sites.jpg' %}" alt="">
                 </div>
             </div>
-            <div class="parallax-overlay"></div>
+{#            <div class="parallax-overlay"></div>#}
         </div>
         <div class="centrize">
             <div class="v-center">
@@ -20,7 +20,8 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="title text-center">
-                                <h1>Лендинг\Визитка</h1>
+                                <h1>Разработка сайтов</h1>
+                                <h4>Лендинг\Визитка</h4>
                             </div>
                         </div>
                     </div>
@@ -31,48 +32,89 @@
     <div class='all-our-works'>
         <div class='all-our-works-inner'>
             <div class='all-our-works-item all-our-works-item-active'>
-                <a href="{% url 'createlanding' %}"></a>
-                <img src="{% static 'images/banknote.svg' %}">
-                <p>Текст1</p>
-                <p>Текст2</p>
+                <a href="{% url 'createlanding' %}">
+                <img src="{% static 'images/icons/landing.svg' %}">
+                <p>Лендинг / Визитка</p>
+                </a>
             </div>
+
             <div class='all-our-works-item'>
                 <a href="{% url 'createblog' %}">
-                    <img src="{% static 'images/banknote.svg' %}">
-                    <p>Текст1</p>
-                    <p>Текст2</p>
+                    <img src="{% static 'images/icons/blog.svg' %}">
+                    <p>Блог / Портфолио</p>
                 </a>
             </div>
             <div class='all-our-works-item'>
                 <a href="{% url 'createservice' %}">
-                    <img src="{% static 'images/banknote.svg' %}">
-                    <p>Текст1</p>
-                    <p>Текст2</p>
+                    <img src="{% static 'images/icons/service.svg' %}">
+                    <p>Сайт - Услуга</p>
+
                 </a>
             </div>
             <div class='all-our-works-item'>
                 <a href="{% url 'createshop' %}">
-                    <img src="{% static 'images/banknote.svg' %}">
-                    <p>Текст1</p>
-                    <p>Текст2</p>
+                    <img src="{% static 'images/icons/shop.svg' %}">
+                    <p>Интернет-Магазин</p>
+
                 </a>
             </div>
             <div class='all-our-works-item'>
                 <a href="{% url 'createforum' %}">
-                    <img src="{% static 'images/banknote.svg' %}">
-                    <p>Текст1</p>
-                    <p>Текст2</p>
+                    <img src="{% static 'images/icons/forum.svg' %}">
+                    <p>ФорумПортал</p>
+
                 </a>
             </div>
             <div class='all-our-works-item'>
                 <a href="{% url 'createcrm' %}">
-                    <img src="{% static 'images/banknote.svg' %}">
-                    <p>Текст1</p>
-                    <p>Текст2</p>
+                    <img src="{% static 'images/icons/crm.svg' %}">
+                    <p>CRM\ERP Системы</p>
+
                 </a>
             </div>
 
         </div>
+           <section class="split-section">
+        <div class="container-lg side-background">
+          <div class="col-md-6 col-sm-4 img-side img-right">
+            <div class="img-holder">
+              <img class="bg-img" src="{% static 'images/bg-image-30.jpg' %}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-md-5 col-sm-7">
+            <ul class="nav nav-tabs minimal-tabs cols-3">
+              <li class="active"><a href="#tab-1" data-toggle="tab"><span>Mission</span></a>
+              </li>
+              <li><a href="#tab-2" data-toggle="tab"><span>Customers</span></a>
+              </li>
+              <li><a href="#tab-3" data-toggle="tab"><span>Ideas</span></a>
+              </li>
+            </ul>
+            <div class="tab-content pt-25 pb-25">
+              <div class="tab-pane fade active in" id="tab-1">
+                <p>Expedita minima fugiat ea maiores itaque natus animi officia iure deleniti unde, facilis velit optio! Culpa quis neque tempora deleniti assumenda aperiam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt neque porro quia quidem saepe assumenda asperiores quo ratione ipsam nulla quisquam.</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+              <div class="tab-pane fade" id="tab-2">
+                <p>Itaque omnis tenetur placeat facere mollitia molestias, doloribus pariatur sapiente qui hic laboriosam aut accusamus repellat ab perspiciatis commodi voluptates.</p>
+                <p>Amet reiciendis natus dolorem nisi iusto vel laudantium quisquam tenetur, saepe rem ducimus, harum possimus delectus ex neque numquam officia! Dolore, ut?</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+              <div class="tab-pane fade" id="tab-3">
+                <p>Eligendi dolorem repellat, officiis nobis. Itaque repudiandae, eligendi totam nihil aliquid, vitae quos cum minus nulla autem, in? Temporibus, accusantium.</p>
+                <p>Iusto et omnis vel, ex illo rem qui provident sed deserunt deleniti voluptatem, labore. Quia modi dignissimos, dicta sapiente aspernatur, consectetur veritatis.</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         <section class="grey-bg">
             <div class="container">
                 <div class="title text-center">

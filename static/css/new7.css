@@ -7,7 +7,9 @@
 #navbar .logo a{
     color: #fff;
 }
-
+.container-lg{
+    width: 1500px;
+}
 #navbar.stick .logo a{
     color: #060F1E ;
 }
@@ -81,7 +83,7 @@
 }
 
 .grey-bg{
-    background-color: #F7F7F7;
+    background-color: #fcfcfc;
 }
 
 .boxed-tabs > li.active > a,
@@ -195,12 +197,14 @@
 .all-our-works-item{
     text-align: center;
     z-index: 1000;
-    background-color: #f7f7f7;
-    padding: 31%;
+    background-color: #fcfcfc;
+    padding: 15px 0;
     transition: all 0.5s ease;
 
 }
-
+.all-our-works-item img{
+    width: 100px;
+}
 .all-our-works-item:hover{
     box-shadow: 0px 1px 7px 1px #00000045;
     background-color: #fff;
@@ -209,7 +213,7 @@
 
 }
 .all-our-works-item p{
-    font-size: 14px;
+    font-size: 16px;
     color: #060F1E;
 }
 

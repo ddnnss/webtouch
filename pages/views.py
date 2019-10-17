@@ -33,8 +33,11 @@ def about(request):
 
 def createlanding(request):
     callbackForm = CallbackForm()
-    return render(request, 'pages/price.html', locals())
+    return render(request, 'pages/landing.html', locals())
 
+def createblog(request):
+    callbackForm = CallbackForm()
+    return render(request, 'pages/blog.html', locals())
 def callbackForm(request):
     print(request.POST)
     return_dict = {}
