@@ -8,7 +8,9 @@
     color: #fff;
 }
 .container-lg{
-    width: 1500px;
+    max-width: 1500px;
+    margin:  0 auto;
+    padding: 0 15px;
 }
 #navbar.stick .logo a{
     color: #060F1E ;
@@ -203,7 +205,7 @@
 
 }
 .all-our-works-item img{
-    width: 100px;
+    width: 75px;
 }
 .all-our-works-item:hover{
     box-shadow: 0px 1px 7px 1px #00000045;
@@ -280,7 +282,7 @@
 @media (max-width: 575px){
     .all-our-works-inner{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
 
     }
     .all-our-works-item{

@@ -12,7 +12,7 @@
                     <img src="{% static 'images/Sites.jpg' %}" alt="">
                 </div>
             </div>
-            {#            <div class="parallax-overlay"></div>#}
+{#            <div class="parallax-overlay"></div>#}
         </div>
         <div class="centrize">
             <div class="v-center">
@@ -33,21 +33,21 @@
         <div class='all-our-works-inner'>
             <div class='all-our-works-item '>
                 <a href="{% url 'createlanding' %}">
-                    <img src="{% static 'images/icons/landing.svg' %}">
-                    <p>Лендинг / Визитка</p>
+                <img src="{% static 'images/icons/landing.svg' %}">
+                <p>Лендинг, Визитка</p>
                 </a>
             </div>
+
             <div class='all-our-works-item all-our-works-item-active'>
                 <a href="{% url 'createblog' %}">
                     <img src="{% static 'images/icons/blog.svg' %}">
-                    <p>Блог / Портфолио</p>
-
+                    <p>Блог, Портфолио</p>
                 </a>
             </div>
             <div class='all-our-works-item'>
                 <a href="{% url 'createservice' %}">
                     <img src="{% static 'images/icons/service.svg' %}">
-                    <p>Сайт - Услуга</p>
+                    <p>Сайт-Услуга</p>
 
                 </a>
             </div>
@@ -61,7 +61,7 @@
             <div class='all-our-works-item'>
                 <a href="{% url 'createforum' %}">
                     <img src="{% static 'images/icons/forum.svg' %}">
-                    <p>ФорумПортал</p>
+                    <p>Форум, Портал</p>
 
                 </a>
             </div>
@@ -74,38 +74,82 @@
             </div>
 
         </div>
+           <section class="split-section">
+
+        <div class="container-lg">
+            <div class="row">
+               <div class="col-md-6 col-sm-12">
+            <ul class="nav nav-tabs minimal-tabs cols-3">
+              <li class="active"><a href="#tab-tab-1" data-toggle="tab"><span>Mission</span></a>
+              </li>
+              <li><a href="#tab-tab-2" data-toggle="tab"><span>Customers</span></a>
+              </li>
+              <li><a href="#tab-tab-3" data-toggle="tab"><span>Ideas</span></a>
+              </li>
+            </ul>
+            <div class="tab-content pt-25 pb-25">
+              <div class="tab-pane fade active in" id="tab-tab-1">
+                <p>Expedita minima fugiat ea maiores itaque natus animi officia iure deleniti unde, facilis velit optio! Culpa quis neque tempora deleniti assumenda aperiam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt neque porro quia quidem saepe assumenda asperiores quo ratione ipsam nulla quisquam.</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+              <div class="tab-pane fade" id="tab-tab-2">
+                <p>Itaque omnis tenetur placeat facere mollitia molestias, doloribus pariatur sapiente qui hic laboriosam aut accusamus repellat ab perspiciatis commodi voluptates.</p>
+                <p>Amet reiciendis natus dolorem nisi iusto vel laudantium quisquam tenetur, saepe rem ducimus, harum possimus delectus ex neque numquam officia! Dolore, ut?</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+              <div class="tab-pane fade" id="tab-tab-3">
+                <p>Eligendi dolorem repellat, officiis nobis. Itaque repudiandae, eligendi totam nihil aliquid, vitae quos cum minus nulla autem, in? Temporibus, accusantium.</p>
+                <p>Iusto et omnis vel, ex illo rem qui provident sed deserunt deleniti voluptatem, labore. Quia modi dignissimos, dicta sapiente aspernatur, consectetur veritatis.</p>
+                <p class="mt-25"><a class="btn btn-bordered upper" href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+          </div>
+                 <div class="col-md-6 col-sm-12">
+            <div style="height: 315px;">
+              <img class="bg-img" src="{% static 'images/bg-image-30.jpg' %}" alt="">
+            </div>
+          </div>
+            </div>
+
+        </div>
+      </section>
         <section class="grey-bg">
             <div class="container">
                 <div class="title text-center">
-                    <h6>Icon Tabs</h6>
-                </div>
+
+                    <h2 class="our-dark-blue">Наши последние работы</h2>
+                  </div>
                 <div class="row pt-25 pb-25">
                     <div class="col-md-8 col-md-offset-2">
                         <ul class="nav nav-tabs icon-tabs center-tabs cols-4">
-                            <li class="active"><a href="#tab-1" data-toggle="tab"><i class="hc-todo"></i><span>Prototyping</span></a>
+                            <li class="active"><a href="#tab-1" data-toggle="tab"><i class="hc-todo"></i></a>
                             </li>
-                            <li><a href="#tab-2" data-toggle="tab"><i class="hc-brush"></i><span>Design</span></a>
+                            <li><a href="#tab-2" data-toggle="tab"><i class="hc-brush"></i></a>
                             </li>
-                            <li><a href="#tab-3" data-toggle="tab"><i class="hc-server-cloud"></i><span>Development</span></a>
+                            <li><a href="#tab-3" data-toggle="tab"><i class="hc-server-cloud"></i></a>
                             </li>
-                            <li><a href="#tab-4" data-toggle="tab"><i class="hc-color-filter"></i><span>Marketing</span></a>
+                            <li><a href="#tab-4" data-toggle="tab"><i class="hc-color-filter"></i></a>
                             </li>
                         </ul>
                         <div class="tab-content text-center">
                             <div class="tab-pane fade active in" id="tab-1">
-                                <p>Expedita minima fugiat ea maiores itaque natus animi officia iure deleniti unde, facilis velit optio! Culpa quis neque tempora deleniti assumenda aperiam. Ex reiciendis nobis qui laboriosam a sit accusantium vitae magni facilis eum possimus
+                                <p>Expqedita minima fugiat ea maiores itaque natus animi officia iure deleniti unde, facilis velit optio! Culpa quis neque tempora deleniti assumenda aperiam. Ex reiciendis nobis qui laboriosam a sit accusantium vitae magni facilis eum possimus
                                     quaerat sed dolor, modi aut similique.</p>
                             </div>
                             <div class="tab-pane fade" id="tab-2">
-                                <p>Itaque omnis tenetur placeat facere mollitia molestias, doloribus pariatur sapiente qui hic laboriosam aut accusamus repellat ab perspiciatis commodi voluptates corporis, consequatur! At consequatur, quos reiciendis accusamus aperiam
+                                <p>Itwaque omnis tenetur placeat facere mollitia molestias, doloribus pariatur sapiente qui hic laboriosam aut accusamus repellat ab perspiciatis commodi voluptates corporis, consequatur! At consequatur, quos reiciendis accusamus aperiam
                                     ipsum ex autem odio possimus.</p>
                             </div>
                             <div class="tab-pane fade" id="tab-3">
-                                <p>Eligendi dolorem repellat, officiis nobis. Itaque repudiandae, eligendi totam nihil aliquid, vitae quos cum minus nulla autem, in? Temporibus, accusantium. Laborum, asperiores. A dolores eaque, cupiditate eius quae expedita magni optio,
+                                <p>Eligwendi dolorem repellat, officiis nobis. Itaque repudiandae, eligendi totam nihil aliquid, vitae quos cum minus nulla autem, in? Temporibus, accusantium. Laborum, asperiores. A dolores eaque, cupiditate eius quae expedita magni optio,
                                     at quaerat ipsa assumenda!</p>
                             </div>
                             <div class="tab-pane fade" id="tab-4">
-                                <p>Veniam culpa doloremque hic deleniti eius architecto at corrupti ea fuga reprehenderit rem, recusandae quasi nisi, corporis, assumenda aliquam optio adipisci dolores. Necessitatibus nesciunt quidem ducimus in qui neque natus veritatis
+                                <p>Venidam culpa doloremque hic deleniti eius architecto at corrupti ea fuga reprehenderit rem, recusandae quasi nisi, corporis, assumenda aliquam optio adipisci dolores. Necessitatibus nesciunt quidem ducimus in qui neque natus veritatis
                                     vero iure recusandae impedit.</p>
                             </div>
                         </div>
@@ -115,9 +159,10 @@
         </section>
         <section>
             <div class="container">
-                <div class="title text-center">
-                    <h6>Boxed - Animated</h6>
-                </div>
+               <div class="title text-center">
+
+                    <h2 class="our-dark-blue">Наши последние работы</h2>
+                  </div>
                 <div class="row pt-25 pb-25">
                     <div class="col-md-3 col-sm-6">
                         <div class="icon-box boxed-style">
@@ -160,23 +205,15 @@
         </section>
         <section class="grey-bg" style="background-color: #060F1E !important;">
             <div class="container">
-                <div class="title text-center">
-                    <h6></h6>
-                </div>
+
                 <div class="row pt-25 pb-25">
                     <div class="col-md-12 ">
-                        <ul class="nav nav-tabs boxed-tabs center-tabs cols-3">
-                            <li class="active"><a href="#boxed-tab-1" data-toggle="tab"><span>Monday</span></a>
-                            </li>
-                            <li><a href="#boxed-tab-2" data-toggle="tab"><span>Wednesday</span></a>
-                            </li>
 
-                        </ul>
                         <div class="tab-content text-center">
                             <div class="tab-pane fade active in" id="boxed-tab-1">
                                 <div class="section-content">
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-md-4 col-sm-6 col-md-offset-2">
                                             <div class="pricing-table text-left">
                                                 <div class="pricing-head">
                                                     <h4>Starter</h4>
@@ -198,7 +235,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-md-4 col-sm-6">
                                             <div class="pricing-table text-left">
                                                 <div class="pricing-head">
                                                     <h4>Silver</h4>
@@ -220,150 +257,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <!-- <span class="featured-label">Best Value</span> -->
-                                                <div class="pricing-head">
-                                                    <h4>Gold</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <div class="pricing-head">
-                                                    <h4>Platinum</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
 
                             </div><!--//tab1-->
-                            <div class="tab-pane fade" id="boxed-tab-2">
-                                <div class="section-content">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <div class="pricing-head">
-                                                    <h4>Starter</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <div class="pricing-head">
-                                                    <h4>Silver</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <!-- <span class="featured-label">Best Value</span> -->
-                                                <div class="pricing-head">
-                                                    <h4>Gold</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="pricing-table text-left">
-                                                <div class="pricing-head">
-                                                    <h4>Platinum</h4>
-                                                </div>
-                                                <div class="price">
-                                                    <h2><span>&#8381;</span>101010</h2>
-                                                </div>
-                                                <ul class="features nav">
-                                                    <li><span>Unlimited Connections</span>
-                                                    </li>
-                                                    <li><span>24/7 Support</span>
-                                                    </li>
-                                                    <li><span>Full SSL Protection</span>
-                                                    </li>
-                                                    <li><span>Unlimited Channels</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="pricing-footer"><a class="btn btn-dark btn-sm no-radius" href="#">Подробнее</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
