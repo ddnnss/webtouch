@@ -184,6 +184,9 @@
     color: red;
 }
 
+.ib-content p{
+    font-size: 14px;
+}
 
 .all-our-works{
 
@@ -195,17 +198,91 @@
 
 }
 
+.tab-1-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/number1.svg) no-repeat center;
+    background-size: cover;
+}
+
+.tab-1-tab.active .tab-1-icon{
+    background: url(../images/icons/number1_a.svg)no-repeat center;
+    background-size: cover;
+}
+
+
+.tab-2-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/number2.svg) no-repeat center;
+    background-size: cover;
+}
+
+.tab-2-tab.active .tab-2-icon{
+    background: url(../images/icons/number2_a.svg)no-repeat center;
+    background-size: cover;
+}
+
+
+.tab-3-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/number3.svg) no-repeat center;
+    background-size: cover;
+}
+
+.tab-3-tab.active .tab-3-icon{
+    background: url(../images/icons/number3_a.svg)no-repeat center;
+    background-size: cover;
+}
+
+
+.tab-4-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/number4.svg) no-repeat center;
+    background-size: cover;
+}
+
+.tab-4-tab.active .tab-4-icon{
+    background: url(../images/icons/number4_a.svg)no-repeat center;
+    background-size: cover;
+}
+
+
+.tab-5-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/number5.svg) no-repeat center;
+    background-size: cover;
+}
+
+.tab-5-tab.active .tab-5-icon{
+    background: url(../images/icons/number5_a.svg)no-repeat center;
+    background-size: cover;
+}
+
+.icon-tabs > li {
+    width: 15% !important;
+}
 
 .all-our-works-item{
     text-align: center;
     z-index: 1000;
-    background-color: #fcfcfc;
+    background-color: #060F1E;
     padding: 15px 0;
     transition: all 0.5s ease;
+
 
 }
 .all-our-works-item img{
     width: 75px;
+    margin-bottom: 5px;
 }
 .all-our-works-item:hover{
     box-shadow: 0px 1px 7px 1px #00000045;
@@ -214,15 +291,20 @@
     z-index: 1003;
 
 }
+.all-our-works-item:hover p{
+    color: #060F1E;
+}
 .all-our-works-item p{
     font-size: 16px;
-    color: #060F1E;
+    color: #ffffff;
 }
 
 .all-our-works-item-active{
     background-color: #fff;
 }
-
+.all-our-works-item-active p{
+      color: #060F1E;
+}
 .all-our-works-item-active:hover{
     box-shadow: none;
     transform: none;
@@ -287,5 +369,9 @@
     }
     .all-our-works-item{
         padding: 21%;
+    }
+
+    .icon-tabs > li {
+    width: 19% !important;
     }
 }

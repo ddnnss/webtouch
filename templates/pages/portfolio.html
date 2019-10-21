@@ -12,7 +12,7 @@
               <img src="{% static 'images/kaysi.jpg' %}" alt="">
             </div>
           </div>
-          <div class="parallax-overlay"></div>
+
         </div>
         <div class="centrize">
           <div class="v-center">
@@ -30,9 +30,9 @@
         </div>
       </section>
       <section style="padding-top: 40px">
-
-          <div class="row">
-            <ul id="filters">
+      <div class="container-lg">
+            <div class="row">
+            <ul id="filters" style="padding: 0 15px;">
               <li class="active" data-filter="*">ВСЕ</li>
                 {% for filter in filters %}
                       <li data-filter=".{{ filter.name_slug }}">{{ filter.name }}</li>
@@ -58,6 +58,8 @@
                 {% endfor %}
             </div>
           </div>
+      </div>
+
 
       </section>
 
